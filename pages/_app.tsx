@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
+import Layout from '@/components/Layout';
 import { reducer } from '@/store';
 
 const store = createStore(reducer);
@@ -10,7 +11,9 @@ const store = createStore(reducer);
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Provider>
   );
 }
