@@ -24,7 +24,7 @@ export default function useCountdown() {
   useEffect(() => _clearTimer, []);
 
   useEffect(() => {
-    if (time === 0) {
+    if (time <= 0) {
       _clearTimer();
     }
   }, [time]);

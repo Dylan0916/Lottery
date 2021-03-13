@@ -1,13 +1,15 @@
+import { User } from '@/store/reducer';
+
 import { S } from './styles';
 
 interface Props {
-  name: string;
+  user: User;
 }
 
-export default function ListItem({ name }: Readonly<Props>) {
+export default function ListItem({ user: { name, avatar } }: Readonly<Props>) {
   return (
     <S.Container>
-      <S.Avatar src="/avatar.png" alt="Avatar" />
+      <S.Avatar src={avatar} alt="Avatar" />
       <S.Name>{name}</S.Name>
     </S.Container>
   );

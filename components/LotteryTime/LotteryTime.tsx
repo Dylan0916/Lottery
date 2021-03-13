@@ -9,7 +9,7 @@ export default function LotteryTime() {
 
   const onTimeInput = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
-    const formattedValue = value.replace(/[^0-9]/g, '');
+    const formattedValue = value.replace(/[^0-9\.]/g, '');
 
     setTime(formattedValue);
   };
@@ -26,7 +26,7 @@ export default function LotteryTime() {
     <S.Container>
       <S.Title>抽獎時間</S.Title>
       <S.InputSection>
-        <S.TimeInput type="text" value={time} onInput={onTimeInput} />
+        <S.TimeInput type="number" min={0} value={time} onInput={onTimeInput} />
         <S.TimeText>分鐘</S.TimeText>
         <S.TimeSubmit onClick={onClick}>設定</S.TimeSubmit>
       </S.InputSection>
