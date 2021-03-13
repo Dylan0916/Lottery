@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const S = {
   Container: styled.div`
-    margin-right: 80px;
+    flex: 0 0 300px;
   `,
   Title: styled.h3`
     margin-top: 0;

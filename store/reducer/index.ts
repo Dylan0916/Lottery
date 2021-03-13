@@ -1,13 +1,11 @@
 import produce from 'immer';
 
-export interface State {
-  a: string;
-}
+export interface State {}
 
-const DEFAULT_STATE = { a: 'test' };
+const DEFAULT_STATE: State = {};
 
-const reducer = produce((draft, action) => {
-  switch (action.payload) {
+const reducer = produce((draft: State, action) => {
+  switch (action.type) {
     default:
       break;
   }
