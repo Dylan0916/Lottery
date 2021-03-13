@@ -10,11 +10,11 @@ export default function useCountdown() {
     }
   };
 
-  const handleSetTime = (value: number) => {
+  const handleSetTime = (seconds: number) => {
     _clearTimer();
-    setTime(value);
+    setTime(seconds);
 
-    if (value > 0) {
+    if (seconds > 0) {
       timer.current = setInterval(() => {
         setTime(prevTime => prevTime - 1);
       }, 1000);
