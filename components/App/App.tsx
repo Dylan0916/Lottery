@@ -1,5 +1,9 @@
-import React from 'react';
+import LotteryTime from '../LotteryTime';
 
 export default function App() {
-  return <div>App</div>;
+  return (
+    <>
+      <LotteryTime />
+    </>
+  );
 }
