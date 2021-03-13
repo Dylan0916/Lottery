@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const S = {
   Container: styled.div`
-    padding: 0 10px;
+    margin-right: 80px;
   `,
   Title: styled.h3`
-    margin-top: 10px;
+    margin-top: 0;
     margin-bottom: 10px;
   `,
   InputSection: styled.div`
