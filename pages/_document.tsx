@@ -24,6 +24,12 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     box-sizing: border-box;
   }
+
+  @supports (-webkit-overflow-scrolling: touch) {
+    input {
+      font-size: 16px;
+    }
+  }
 `;
 
 export default class MyDocument extends Document {
