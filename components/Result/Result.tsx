@@ -19,7 +19,7 @@ export default function Result() {
     if (!winner.name) {
       goBack();
     }
-  }, [winner?.name]);
+  }, [winner.name]);
 
   if (!winner.name) {
     return null;

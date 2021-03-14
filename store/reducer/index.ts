@@ -3,7 +3,7 @@ import produce from 'immer';
 
 import { CLEAR_LOTTERY, UPDATE_LOTTERY } from '../actions';
 
-function createUserList(len: number) {
+export function createUserList(len: number) {
   return new Array(len)
     .fill('')
     .map(() => ({ name: faker.name.findName(), avatar: '/avatar.png' }));
@@ -19,7 +19,7 @@ export interface State {
   winner: User;
 }
 
-const DEFAULT_STATE: State = {
+export const DEFAULT_STATE: State = {
   list: createUserList(7),
   winner: {} as User,
 };
@@ -29,7 +29,7 @@ const reducer = produce((draft: State, action) => {
     case UPDATE_LOTTERY: {
       const { list } = draft;
       const listLen = list.length;
-      const random = Math.floor(Math.random() * listLen) + 1;
+      const random = Math.floor(Math.random() * listLen);
 
       draft.winner = list[random];
       break;
