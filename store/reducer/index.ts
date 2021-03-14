@@ -24,6 +24,9 @@ export const DEFAULT_STATE: State = {
   winner: {} as User,
 };
 
+console.log('== DEFAULT_STATE ==');
+console.log(DEFAULT_STATE);
+
 const reducer = produce((draft: State, action) => {
   switch (action.type) {
     case UPDATE_LOTTERY: {
